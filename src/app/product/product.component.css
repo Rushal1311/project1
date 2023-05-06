@@ -1,0 +1,29 @@
+table,th,td{border: 3px solid black; border-collapse: collapse ;padding: 5px;}
+#inptBox{
+    padding-left:10px ;
+    width: 150px; 
+
+}
+.demo-toggles {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .demo-toggles * {
+    margin-bottom: 16px;
+  }
+  
+  .demo-options {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
+  
+  .demo-data * {
+    margin: 16px 0;
+  }
+  
+  .demo-paginator {
+    width: 600px;
+  }
+  

@@ -1,0 +1,36 @@
+<input type="text" placeHolder="Search Product" id="inptBox">
+<br><br><br>
+
+<table>
+
+    <tr>
+      <th>Id</th>
+      <th>Titel</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>category</th>
+      <th>image</th>
+      <th>Rating</th>
+      <th>Option</th>
+    </tr>
+ 
+    <tr *ngFor="let pData of product | paginate: { itemsPerPage: 10, currentPage: page }">
+       
+
+      <td>{{pData.id}}</td>
+      <td>{{pData.title}}</td>
+      <td>{{pData.price}}</td>
+      <td>{{pData.description}}</td>
+      <td>{{pData.category}}</td>
+      <td><img src={{pData.image}} alt="" style="width:200px;"/></td>
+      <td>
+        <input value={{pData.rating.rate}} />
+        <input value={{pData.rating.count}} />     
+    </td>
+    <td>Update <br> Delete</td>
+
+    </tr>
+    <div class="has-text-centered">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </table>
